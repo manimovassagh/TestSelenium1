@@ -22,13 +22,13 @@ public class FirstTest {
 
     }
 
-
-
     @AfterEach
     void afterTests() {
         System.out.println("Test abgeschlossen. - Aufräumen");
         driver.close();
     }
+
+
 
     @Test
     public void testTitle() {
@@ -37,4 +37,7 @@ public class FirstTest {
         driver.findElement(By.cssSelector("#header_main > div > div > span > a > img")).click();
         assertEquals(expect, driver.getTitle());
     }
+
+
+
 }
