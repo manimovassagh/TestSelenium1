@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class FirstTest {
 
     WebDriver driver;
@@ -35,6 +36,7 @@ public class FirstTest {
         String expect ="coding blog - Coding Solo | programmierblog | tutorials | Videos";
 
         driver.findElement(By.cssSelector("#header_main > div > div > span > a > img")).click();
+        driver.findElement(By.cssSelector("#cookie_action_close_header")).click();
         assertEquals(expect, driver.getTitle());
     }
 
