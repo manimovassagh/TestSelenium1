@@ -30,9 +30,16 @@ public class TestHello {
 
 	@Test
 	public void testTitle() {
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String expect = "coding blog - Coding Solo | programmierblog | tutorials | Videos";
 
 		driver.findElement(By.cssSelector("#header_main > div > div > span > a > img")).click();
+
 		driver.findElement(By.cssSelector("#cookie_action_close_header")).click();
 		assertEquals(expect, driver.getTitle());
 		assertEquals(expect, "coding blog - Coding Solo | programmierblog | tutorials | Videos");
